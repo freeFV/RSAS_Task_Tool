@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>720</width>
-    <height>620</height>
+    <width>427</width>
+    <height>207</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -23,7 +23,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>RSAS登录</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout" stretch="5,5">
    <property name="spacing">
@@ -44,7 +44,11 @@
    <item>
     <widget class="QWidget" name="widget" native="true">
      <property name="styleSheet">
-      <string notr="true"/>
+      <string notr="true">QWidget#widget_top{
+border-image:url(:/md7699.png);
+border-top-left-radius:2px;
+border-top-right-radius:2px;
+}</string>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout_2">
       <property name="spacing">
@@ -64,6 +68,9 @@
       </property>
       <item>
        <widget class="QLabel" name="login_top_bg_label">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
         <property name="text">
          <string>TextLabel</string>
         </property>
@@ -108,29 +115,116 @@
         <property name="styleSheet">
          <string notr="true"/>
         </property>
-        <layout class="QGridLayout" name="gridLayout">
-         <item row="4" column="1" alignment="Qt::AlignRight">
-          <widget class="QCheckBox" name="remember_passwd_checkBox">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2" stretch="7">
+         <item>
+          <widget class="QWidget" name="widget_4" native="true">
            <property name="minimumSize">
             <size>
              <width>0</width>
              <height>0</height>
             </size>
            </property>
-           <property name="font">
-            <font>
-             <family>幼圆</family>
-             <pointsize>11</pointsize>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">QCheckBox {
+           <layout class="QGridLayout" name="gridLayout_2">
+            <property name="bottomMargin">
+             <number>9</number>
+            </property>
+            <item row="0" column="1" colspan="2">
+             <widget class="QLineEdit" name="username_lineEdit">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <family>微软雅黑</family>
+                <pointsize>11</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QLineEdit{
+background:Transparent;
+border-width:1px;
+border-radius:0px;
+font-size:11pt;
+color:black;
+border-bottom:1px solid gray;
+}
+QLineEdit:hover{
+border-width:1px;
+border-radius:0px;
+font-size:11pt;
+color:black;
+border-bottom:1px solid rgb(70,200,50);
+}</string>
+              </property>
+              <property name="placeholderText">
+               <string>请输入账号</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1" colspan="2">
+             <widget class="QLineEdit" name="passwd_lineEdit">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <family>微软雅黑</family>
+                <pointsize>11</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QLineEdit{
+background:Transparent;
+border-width:1px;
+border-radius:0px;
+font-size:11pt;
+color:black;
+border-bottom:1px solid gray;
+}
+QLineEdit:hover{
+border-width:1px;
+border-radius:0px;
+font-size:11pt;
+color:black;
+border-bottom:1px solid rgb(70,200,50);
+}</string>
+              </property>
+              <property name="echoMode">
+               <enum>QLineEdit::Password</enum>
+              </property>
+              <property name="placeholderText">
+               <string>请输入密码</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="2">
+             <widget class="QCheckBox" name="remember_passwd_checkBox">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <family>微软雅黑</family>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QCheckBox {
     spacing: 5px;
 }
 
@@ -138,85 +232,130 @@ QCheckBox::indicator {
     width: 20px;
     height: 20px;
 }</string>
-           </property>
-           <property name="text">
-            <string>记住密码</string>
-           </property>
-          </widget>
-         </item>
-         <item row="5" column="0" colspan="2">
-          <widget class="QPushButton" name="login_pushButton">
-           <property name="enabled">
-            <bool>false</bool>
-           </property>
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>0</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>16777215</width>
-             <height>50</height>
-            </size>
-           </property>
-           <property name="font">
-            <font>
-             <family>幼圆</family>
-             <pointsize>14</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">QPushButton {
-	background-color: rgb(85, 170, 255);
+              </property>
+              <property name="text">
+               <string>记住密码</string>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>16</width>
+                <height>16</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="0" colspan="3">
+             <widget class="QPushButton" name="login_pushButton">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <family>微软雅黑</family>
+                <pointsize>13</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton {
+	background-color: rgba(84,129,189, 0.8);
 	border-radius: 10px;
 	color: white;
 	spacing: 500px;
 }
 QPushButton:hover {
-	background-color: rgb(0, 170, 255);
+	background-color: rgb(85, 170, 255);
 }
 QPushButton:pressed {
 	background-color: rgb(85,85,255);
 }
 </string>
-           </property>
-           <property name="text">
-            <string>登录</string>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="0">
-          <widget class="QCheckBox" name="Auto_login_checkBox">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>0</height>
-            </size>
-           </property>
-           <property name="font">
-            <font>
-             <family>幼圆</family>
-             <pointsize>11</pointsize>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">QCheckBox {
+              </property>
+              <property name="text">
+               <string>登录</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0" alignment="Qt::AlignBottom">
+             <widget class="QLabel" name="label_2">
+              <property name="font">
+               <font>
+                <family>微软雅黑</family>
+                <pointsize>11</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>密码：</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <spacer name="horizontalSpacer">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="0" column="0" alignment="Qt::AlignBottom">
+             <widget class="QLabel" name="label">
+              <property name="font">
+               <font>
+                <family>微软雅黑</family>
+                <pointsize>11</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>账号：</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QCheckBox" name="Auto_login_checkBox">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <family>微软雅黑</family>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QCheckBox {
     spacing: 5px;
 }
 
@@ -224,94 +363,13 @@ QCheckBox::indicator {
     width: 20px;
     height: 20px;
 }</string>
-           </property>
-           <property name="text">
-            <string>自动登录</string>
-           </property>
-           <property name="iconSize">
-            <size>
-             <width>16</width>
-             <height>16</height>
-            </size>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="0" colspan="2">
-          <widget class="QLineEdit" name="username_lineEdit">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>40</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>16777215</width>
-             <height>30</height>
-            </size>
-           </property>
-           <property name="font">
-            <font>
-             <family>微软雅黑</family>
-             <pointsize>15</pointsize>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">QLineEdit {
-	font-size: 15pt;
-	border: none;
-	border-bottom: 1px solid lightgray;
-	background-color: transparent;
-}
-QLineEdit:hover {
-	border-bottom:1px solid gray;
-}
-QLineEdit:focus {
-border-bottom: 1px solid rgb(18,183,245);
-}</string>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="0" colspan="2">
-          <widget class="QLineEdit" name="passwd_lineEdit">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>40</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>16777215</width>
-             <height>30</height>
-            </size>
-           </property>
-           <property name="font">
-            <font>
-             <family>微软雅黑</family>
-             <pointsize>15</pointsize>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">QLineEdit {
-	font-size: 15pt;
-	border: none;
-	border-bottom: 1px solid lightgray;
-	background-color: transparent;
-}
-QLineEdit:hover {
-	border-bottom:1px solid gray;
-}
-QLineEdit:focus {
-border-bottom: 1px solid rgb(18,183,245);
-}</string>
-           </property>
-           <property name="echoMode">
-            <enum>QLineEdit::Password</enum>
-           </property>
-           <property name="clearButtonEnabled">
-            <bool>true</bool>
-           </property>
+              </property>
+              <property name="text">
+               <string>自动登录</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
           </widget>
          </item>
         </layout>
@@ -353,28 +411,12 @@ border-bottom: 1px solid rgb(18,183,245);
    <slot>open_url_link()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>54</x>
-     <y>324</y>
+     <x>63</x>
+     <y>194</y>
     </hint>
     <hint type="destinationlabel">
      <x>-39</x>
      <y>306</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>passwd_lineEdit</sender>
-   <signal>textChanged(QString)</signal>
-   <receiver>LoginForm</receiver>
-   <slot>enable_login_btn()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>295</x>
-     <y>224</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>521</x>
-     <y>224</y>
     </hint>
    </hints>
   </connection>
@@ -385,60 +427,12 @@ border-bottom: 1px solid rgb(18,183,245);
    <slot>ckeck_login()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>290</x>
-     <y>299</y>
+     <x>318</x>
+     <y>176</y>
     </hint>
     <hint type="destinationlabel">
      <x>538</x>
      <y>301</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>Auto_login_checkBox</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>LoginForm</receiver>
-   <slot>auto_login()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>149</x>
-     <y>261</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>-60</x>
-     <y>258</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>remember_passwd_checkBox</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>LoginForm</receiver>
-   <slot>remember_pwd()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>323</x>
-     <y>258</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>530</x>
-     <y>260</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>username_lineEdit</sender>
-   <signal>textChanged(QString)</signal>
-   <receiver>LoginForm</receiver>
-   <slot>enable_login_btn()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>344</x>
-     <y>179</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>524</x>
-     <y>178</y>
     </hint>
    </hints>
   </connection>
@@ -449,12 +443,44 @@ border-bottom: 1px solid rgb(18,183,245);
    <slot>open_config_pane()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>451</x>
-     <y>331</y>
+     <x>417</x>
+     <y>194</y>
     </hint>
     <hint type="destinationlabel">
      <x>517</x>
      <y>306</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Auto_login_checkBox</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>LoginForm</receiver>
+   <slot>auto_login()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>197</x>
+     <y>119</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-71</x>
+     <y>123</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>remember_passwd_checkBox</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>LoginForm</receiver>
+   <slot>remember_pwd()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>286</x>
+     <y>121</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>484</x>
+     <y>121</y>
     </hint>
    </hints>
   </connection>

@@ -13,12 +13,13 @@
 """
 
 import sys
-from main.login_pane import *
+from pycode.login_pane import *
 from PyQt5.QtWidgets import QApplication
 
 ################################################
 #######程序入门
 ################################################
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     login_window = login_pane(mode=0)
